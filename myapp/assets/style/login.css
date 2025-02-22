@@ -1,0 +1,145 @@
+.background-body {
+    background: linear-gradient(90deg, #4b8378, #2b5f56);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure it covers the full viewport */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.color-lightgreen {
+    color: #2b524a;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.body-login {
+    z-index: 2;
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 50px;
+        padding: 15px;
+        max-width: 450px;
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.1); /* เลือกสีพื้นหลังแบบโปร่งแสง */
+        color: #85a7a0;
+    }
+
+    .input-field {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: white;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 20px;
+        margin-right: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .input-wrapper:hover, .input-field:focus {
+        border-color: #ccc; /* เปลี่ยนสีขอบเมื่อ hover หรือ focus */
+    }
+
+    /* จัดการ placeholder */
+    .input-field::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.footer-login {
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        border: 0;
+        border-radius: 40px 40px 0 0;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        position: relative;
+        width: 40%;
+
+        .card-body {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            height: 350px;
+            width: 100%;
+
+            .button-login {
+                background: linear-gradient(90deg, #4b8378, #2b5f56);
+                border: 2px solid white;
+                color: #fff;
+                padding: 15px 20px;
+                cursor: pointer;
+                border-radius: 50px;
+                max-width: 450px;
+                width: 80%;
+                font-size:large;
+                
+                &:hover {
+                    background: linear-gradient(90deg, #2b5f56, #4b8378);
+                }
+
+            }
+
+            .button-create {
+                background: #bed2d0;
+                border: 2px solid #9cbcb7;
+                color: #2b524a;
+                padding: 15px 20px;
+                cursor: pointer;
+                border-radius: 50px;
+                max-width: 450px;
+                width: 80%;
+                font-size:large;
+
+                &:hover {
+                    background: #4b8378;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-login {
+        .card {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-login {
+        .card {
+            width: 100%;
+        }
+    }
+}

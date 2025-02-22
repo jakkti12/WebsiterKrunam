@@ -1,0 +1,100 @@
+.default-layout {
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148817571.jpg?w=1060&t=st=1728987100~exp=1728987700~hmac=ed4eab5660a1a8bf9511cc0909e9070ac4cdeffd4a5a54bb0af0f6bc36b202cc');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure it covers the full viewport */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.navbar-login {
+  z-index: 2;
+
+  a {
+    color: #000;
+  }
+}
+
+.body-login {
+  z-index: 2;
+
+  .card {
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    margin: 0 auto;
+
+    .card-body {
+      padding: 40px;
+
+      .rounded-input {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 30px;
+        border: 1px solid #e0e0e0;
+        outline: none;
+        font-size: 16px;
+        color: #b0b0b0;
+      }
+
+      .rounded-input::placeholder {
+        color: #b0b0b0;
+      }
+    }
+  }
+
+  .slide-img {
+    position: absolute;
+    top: 20%;
+
+    .carousel-inner {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-toggler {
+      background-color: #007bff; /* เปลี่ยนสีปุ่ม hamburger */
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+      color: #000; /* เปลี่ยนสีลิงก์เมนู */
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active {
+      color: #007bff; /* เปลี่ยนสีลิงก์ที่ active */
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .slide-img {
+      display: none;
+  }
+  .body-login .col-md-8.col-lg-5 {
+      max-width: 100%;
+      flex: 0 0 100%;
+  }
+
+  .body-login .card {
+      margin: 20px auto; /* ปรับระยะห่างรอบๆ ให้ดูสมดุล */
+  }
+  .navbar-login .navbar-nav .nav-link {
+      display: inline-block; /* ทำให้ลิงก์ navbar อยู่ในบรรทัดเดียว */
+      padding: 10px 15px; /* ปรับขนาด padding เพื่อลดพื้นที่ */
+      z-index: 3;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .slide-img {
+      display: block;
+  }
+}
